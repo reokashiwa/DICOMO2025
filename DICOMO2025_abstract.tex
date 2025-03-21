@@ -2,6 +2,7 @@
 %\documentclass[Japanese,noauthor]{dicomopapers}
 \usepackage[dvips]{graphicx}
 \usepackage{latexsym}
+\usepackage{url}
 
 \def\Underline{\setbox0\hbox\bgroup\let\\\endUnderline}
 \def\endUnderline{\vphantom{y}\egroup\smash{\underline{\box0}}\\}
@@ -17,7 +18,7 @@
 \begin{document}
 
 % 和文表題
-\title{自律システムのオペレーションを実践する環境 ``AS DOJO'' の設計と運用\footnote{この研究は2025年度国立情報学研究所公募型共同研究(251S1-22822)の助成を受けています。}}
+\title{自律システムのオペレーションを実践する環境 ``AS DOJO'' の設計と運用}
 
 % 英文表題
 \etitle{AS DOJO: Autonomous System for Distributed (Decentralized) Oriented Joint Operation}
@@ -26,7 +27,7 @@
 \affiliate{KDIX}{近畿大学情報学部}
 \affiliate{KDCIRI}{近畿大学情報学研究所}
 
-\author{柏崎 礼生}{HIROKI KASHIWAZAKi}{KDIX,KDCIRI}
+\author{柏崎 礼生}{HIROKI KASHIWAZAKI}{KDIX,KDCIRI}
 
 % 表題などの出力
 \maketitle
@@ -50,14 +51,20 @@
  \item ピアリングのための回線・機器を設置・維持するコストの高さ
 \end{enumerate}
 
-それぞれの困難に対し、以下の手法を用いて実践的かつ実際的なEGP演習テストベッドを構築することにより解決を試みる。
+それぞれの困難に対し、実践的かつ実際的なEGP演習テストベッド''AS DOJO''(Autonomous System for Distributed (Decentralized) Oriented Joint-Operation)を構築することにより解決を試みる(図\ref{AS_dojo})。
 
-\begin{enumerate}
- \item 著者が所属する産学協力研究コンソーシアム インターネット技術研究会 (シンITRC) は歴史的PIアドレスを所有する組織である。これを本テストベッドに参加する組織の間で実際的に配分する。
- \item 本テストベッドに参加する組織間ではピアリングの要求があったとき、これを断ることができないという制約条件を課す。これにより本テストベッドに参加すれば、ピアリング相手に困ることはない。
- \item 研究提案者らが運用する広域分散プラットフォームDistcloud\footnote{広域分散プラットフォームDistcloudに関する説明は予稿に譲り本概要では割愛する。}を用いて、物理・ソフトウェア双方の経路制御装置を相互接続する。参加組織間の回線は、Distcloudが利用するSINET L2VPN/VPLS上でQinQ (IEEE802.1q) を用いて実現する。
-\end{enumerate}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=84mm,clip]{AS_dojo.pdf}
+\caption{提案するEGP演習テストベッド''AS DOJO''の模式図}
+\label{AS_dojo}
+\end{center}
+\end{figure}
 
+\begin{acknowledgment}
+この研究は2025年度国立情報学研究所公募型共同研究(251S1-22822)の助成を受けています。
+\end{acknowledgment}
 
+\section*{}
 
 \end{document}
